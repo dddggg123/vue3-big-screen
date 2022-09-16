@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 //  全局样式
 html {
   margin: 0;
@@ -19,4 +21,57 @@ body {
 #app {
   width: 100vw;
   height: 100vh;
+}
+
+.flex-l {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.flex-r {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.react-l {
+  position: relative;
+}
+
+.react-l::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: $theme-sub-color;
+  transform: skewX(45deg);
+
+}
+
+.react-r {
+  position: relative;
+}
+
+.react-r::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: $theme-sub-color;
+  transform: skewX(-45deg);
 }

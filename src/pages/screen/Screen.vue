@@ -1,17 +1,21 @@
 <template>
     <div class="screen-container">
-        <div class="screen-content" ref="screenRef"></div>
+        <div class="screen-content" ref="screenRef">
+            <div class="header-section">
+                <ScreenHeader></ScreenHeader>
+            </div>
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
 import windowResize from '@/utils/resize';
 import { onMounted, onUnmounted } from 'vue';
-// * 适配处理
+import ScreenHeader from '@/pages/screen-header/ScreenHeader.vue'
 const { screenRef, calcRate, windowDraw, unWindowDraw } = windowResize()
-// 生命周期
+
 onMounted(() => {
-    // todo 屏幕适应
+    // 监听浏览器窗口尺寸变化
     windowDraw()
     calcRate()
 })
@@ -33,7 +37,8 @@ onUnmounted(() => {
     .screen-content {
         width: 1920px;
         height: 1080px;
-        background-color: #d3d6dd;
+        box-sizing: border-box;
+        padding: 12px;
         background-image: url('@/assets/home_bg.png');
         background-size: cover;
         background-position: center center;
