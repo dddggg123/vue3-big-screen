@@ -1,6 +1,6 @@
 <template>
-    <div>
-        这里是首页界面
+    <div class="screen-header">
+        
     </div>
 </template>
 

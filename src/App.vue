@@ -14,9 +14,7 @@
 //   margin-top: 60px;
 // }
 .app-container {
-    width: 100%;
-    height: 100%;
-    background-color: #020308;
-    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
 }
 </style>
