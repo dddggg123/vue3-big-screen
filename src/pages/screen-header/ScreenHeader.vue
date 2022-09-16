@@ -65,7 +65,8 @@ const decorationColors = [
 
                 .header-title {
                     color: #fff;
-                    font-size: $lg-font-size;
+                    font-size: $title-font-size;
+                    font-weight: 550;
                 }
             }
         }
@@ -86,7 +87,7 @@ const decorationColors = [
             height: 50px;
 
             .sub-item {
-                width: calc(50% - 60px);
+                width: calc(50% - 20px);
                 // background-color: #0f1325;
                 padding: 0 20px;
 
@@ -140,6 +141,11 @@ const decorationColors = [
         .sub-dec-section {
             width: 20%;
             padding: 0 40px;
+
+            .dv-dec-6 {
+                height: 20px;
+                margin-top: 15px;
+            }
         }
     }
 }
