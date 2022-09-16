@@ -12,7 +12,7 @@
 @import '@/assets/scss/common/variables.scss';
 
 .screen-top-center {
-    height: $box-height3 - 5px;
+    height: $box-height3;
     // width: $box-width3;
     background-color: $theme-sub-color;
     margin: 5px;

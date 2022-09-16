@@ -12,7 +12,7 @@
 @import '@/assets/scss/common/variables.scss';
 
 .screen-bottom-right {
-    height: $box-height7 - 5px;
+    height: $box-height7;
     // width: $box-width3;
     background-color: $theme-sub-color;
     margin: 5px;

@@ -33,7 +33,7 @@
     }
 
     .dv-dec-10 {
-        margin-top: -6px;
+        margin-top: -8px;
     }
 }
 </style>

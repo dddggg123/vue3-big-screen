@@ -12,7 +12,7 @@
 @import '@/assets/scss/common/variables.scss';
 
 .screen-top-right1 {
-    height: $box-height4 - 5px;
+    height: $box-height4;
     // width: $box-width4;
     background-color: $theme-sub-color;
     margin: 5px;

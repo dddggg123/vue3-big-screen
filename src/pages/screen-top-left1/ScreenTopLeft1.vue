@@ -13,7 +13,7 @@
 
 .screen-top-left1 {
     // 这里高度减去上下margin的高度之和
-    height: $box-height1 - 5px;
+    height: $box-height1;
     // width: $box-width2;
     background-color: $theme-sub-color;
     margin: 5px;
