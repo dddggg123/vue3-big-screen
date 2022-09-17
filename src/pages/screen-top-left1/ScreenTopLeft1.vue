@@ -120,11 +120,11 @@ const changeNumber = () => {
         height: $chart-header-height;
 
         .header-left {
-            width: 20%;
+            width: 30px;
         }
 
         .header-right {
-            width: 80%;
+            width: calc(100% - 30px);
 
             .header-title {
                 color: #fff;

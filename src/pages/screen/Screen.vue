@@ -11,7 +11,7 @@
                 <dv-border-box-12>
                     <ScreenTopLeft2></ScreenTopLeft2>
                 </dv-border-box-12>
-                <dv-border-box-8 dur="10">
+                <dv-border-box-8 :dur="10">
                     <ScreenTopCenter></ScreenTopCenter>
                 </dv-border-box-8>
                 <dv-border-box-12>

@@ -13,7 +13,8 @@ export default {
 import * as echarts from 'echarts';
 import theme from '@/common/echart/style/theme';
 import { onMounted, onBeforeMount, ref, watch } from 'vue';
-import type { EChartsType } from 'echarts'
+import type { EChartsType } from 'echarts';
+import geoJson from '@/common/echart/map/fujian.json';
 
 const props = defineProps({
     // 图表唯一 id
@@ -49,6 +50,7 @@ const chart = ref<EChartsType>()
 onMounted(() => {
     echarts.registerTheme('myTheme', theme) // 覆盖默认主题
     chart.value = echarts.init(chartRef.value, 'myTheme')
+    echarts.registerMap("fujian", geoJson as any);
     initChart()
 })
 
@@ -73,6 +75,10 @@ const initChart = (data?: any, clearCaching = false) => {
         chart.value!.setOption(data || props.options, clearCaching)
     }
 }
+
+defineExpose({
+    initChart
+})
 </script>
 
 <style scoped>
