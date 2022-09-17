@@ -7,7 +7,7 @@
             <dv-decoration-5 dur="10"/>
         </div>
         <div class="screen-footer-right">
-            <dv-decoration-10 class="dv-dec-10" />
+            <dv-decoration-10 class="dv-dec-10 dev-reverse" />
         </div>
     </div>
 </template>

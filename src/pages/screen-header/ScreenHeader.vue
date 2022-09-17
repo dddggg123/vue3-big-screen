@@ -9,7 +9,7 @@
                 </div>
                 <dv-decoration-8 class="dv-dec-8" :reverse="true" :color="decorationColors" />
             </div>
-            <dv-decoration-10 class="dv-dec-10" :reverse="true" />
+            <dv-decoration-10 class="dv-dec-10 dev-reverse" :reverse="true" />
         </div>
         <div class="screen-header-bottom-section">
             <div class="sub-section">

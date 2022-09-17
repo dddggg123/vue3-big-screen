@@ -32,6 +32,7 @@ body {
 
 .flex-l {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
 }
@@ -78,4 +79,14 @@ body {
   z-index: -1;
   background: $theme-sub-color;
   transform: skewX(-45deg);
+}
+
+.dev-reverse {
+  transform: rotateY(180deg);
+}
+
+// 图标
+.iconfont {
+  font-size: 20px !important;
+  color: #5cd9e8;
 }
