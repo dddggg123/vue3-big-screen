@@ -76,9 +76,7 @@ onUnmounted(() => {
         height: 1080px;
         box-sizing: border-box;
         padding: 12px;
-        background-image: url('@/assets/home_bg.png');
-        background-size: cover;
-        background-position: center center;
+        background-image: url('@/assets/home_bg.png') no-repeat;
 
         .screen-chart-section1 {
             margin-top: 10px;

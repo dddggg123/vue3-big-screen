@@ -2,7 +2,7 @@
     <div class="screen-top-right1">
         <div class="screen-top-header flex-l">
             <div class="header-left flex-c">
-                <i class="iconfont icon-tongji4" />
+                <i class="iconfont icon-rank" />
             </div>
             <div class="header-right flex-l">
                 <span class="header-title">产品销售渠道分析</span>

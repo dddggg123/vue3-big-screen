@@ -2,7 +2,7 @@
     <div class="screen-top-right2">
         <div class="screen-top-header flex-l">
             <div class="header-left flex-c">
-                <i class="iconfont icon-tongji4" />
+                <i class="iconfont icon-border-bottom" />
             </div>
             <div class="header-right flex-l">
                 <span class="header-title">任务完成排行榜</span>

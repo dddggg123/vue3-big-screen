@@ -5,7 +5,7 @@
             <div class="screen-header-title-section">
                 <dv-decoration-8 class="dv-dec-8" :color="decorationColors" />
                 <div class="title-section">
-                    <p class="header-title">大数据可视化平台</p>
+                    <p class="header-title">新能源汽车大数据可视化平台</p>
                 </div>
                 <dv-decoration-8 class="dv-dec-8" :reverse="true" :color="decorationColors" />
             </div>
@@ -65,7 +65,7 @@ const decorationColors = [
 
                 .header-title {
                     color: #fff;
-                    font-size: $title-font-size;
+                    font-size: $lg-font-size;
                     font-weight: 550;
                 }
             }

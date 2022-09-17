@@ -2,7 +2,7 @@
     <div class="screen-bottom-right">
         <div class="screen-bottom-header flex-l">
             <div class="header-left flex-c">
-                <i class="iconfont icon-tongji4" />
+                <i class="iconfont icon-chart-line" />
             </div>
             <div class="header-right flex-l">
                 <span class="header-title">数据统计</span>
@@ -19,7 +19,7 @@
 import { onMounted, onUnmounted, ref, reactive } from 'vue';
 import Chart from './chart/ChartBottomRight.vue';
 
-const drawTiming = ref(0)
+const intervalInstance = ref(0)
 const chartData = reactive({
     year: 0,
     weekCategory: [] as Array<string>,
@@ -31,7 +31,7 @@ const chartData = reactive({
 })
 
 // methods
-const setData = () => {
+const confirmChartData = () => {
     // 清空轮询数据
     chartData.weekCategory = [];
     chartData.weekMaxData = [];
@@ -77,20 +77,20 @@ const setData = () => {
 }
 
 // 定时函数
-const drawTimingFn = () => {
-    setData();
-    drawTiming.value = setInterval(() => {
-        setData();
-    }, 6000);
+const startTimeInterval = () => {
+    confirmChartData();
+    intervalInstance.value = setInterval(() => {
+        confirmChartData();
+    }, 3000);
 }
 
 // 生命周期
 onMounted(() => {
-    drawTimingFn()
+    startTimeInterval()
 })
 
 onUnmounted(() => {
-    clearInterval(drawTiming.value)
+    window.clearInterval(intervalInstance.value)
 })
 </script>
 

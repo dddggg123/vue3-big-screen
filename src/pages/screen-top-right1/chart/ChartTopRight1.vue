@@ -8,10 +8,12 @@ const props = defineProps({
     // 图表数据项
     chartData: {
         type: Object,
+        default: {},
         require: true
     }
 })
 const { chartData } = props;
+
 const chartRef = ref()
 // 定义固定配置项
 const lineStyle = {

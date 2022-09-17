@@ -2,7 +2,7 @@
     <div class="screen-bottom-left">
         <div class="screen-bottom-header flex-l">
             <div class="header-left flex-c">
-                <i class="iconfont icon-tongji4" />
+                <i class="iconfont icon-align-left" />
             </div>
             <div class="header-right flex-l">
                 <span class="header-title">数据统计</span>
