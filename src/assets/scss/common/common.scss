@@ -14,6 +14,7 @@ html {
   padding: 0;
   width: 100vw;
   height: 100vh;
+  background-color: $theme-color;
 }
 
 body {
@@ -92,10 +93,10 @@ body {
 }
 
 .scr-up {
-    color: red;
+    color: #DC143C;
 }
 
 
 .scr-down {
-    color: greenyellow;
+    color: #90EE90;
 }

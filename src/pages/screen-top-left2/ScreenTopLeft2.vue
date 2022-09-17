@@ -5,7 +5,7 @@
                 <i class="iconfont icon-layer-group" />
             </div>
             <div class="header-right flex-l">
-                <span class="header-title">全国售后点</span>
+                <span class="header-title">省市销量布局</span>
                 <dv-decoration-3 class="dv-dec-3" />
             </div>
         </div>
@@ -22,42 +22,42 @@ const chartData = reactive([
     {
         // 名字需要与 “common/map/fujian.js” 地图数据文件里面定义的一一对应，不能是 “福州” 或者 “闽” 之类的缩写
         name: '福州市',
-        value: 10,
+        value: 11455,
         elseData: {
             // 这里放置地图 tooltip 里想显示的数据
         }
     },
     {
         name: '厦门市',
-        value: 9,
+        value: 13255,
     },
     {
         name: '漳州市',
-        value: 8,
+        value: 7688,
     },
     {
         name: '泉州市',
-        value: 7,
+        value: 5644,
     },
     {
         name: '三明市',
-        value: 6,
+        value: 3466,
     },
     {
         name: '莆田市',
-        value: 5,
+        value: 5745,
     },
     {
         name: '南平市',
-        value: 4,
+        value: 2855,
     },
     {
         name: '龙岩市',
-        value: 3,
+        value: 4652,
     },
     {
         name: '宁德市',
-        value: 2,
+        value: 7888,
     }
 ])
 </script>

@@ -122,7 +122,7 @@ const state = reactive({
             itemGap: 15,
             itemWidth: 12,
             itemHeight: 12,
-            data: ["平均指标", "我的指标"],
+            data: ["线下销售", "线上零售"],
             textStyle: {
                 color: "#fff",
                 fontSize: 14
@@ -162,19 +162,19 @@ const state = reactive({
             },
             indicator: [
                 {
-                    name: "服务态度",
+                    name: "线下销售",
                     max: chartData.maxData
                 },
                 {
-                    name: "产品质量",
+                    name: "线上零售",
                     max: 10
                 },
                 {
-                    name: "任务效率",
+                    name: "朋友推进",
                     max: 12
                 },
                 {
-                    name: "售后保障",
+                    name: "官网搜索",
                     max: 3.5
                 }
             ]
@@ -197,7 +197,7 @@ const state = reactive({
         },
         // 下方Y轴
         yAxis: {
-            name: "工单",
+            name: "辆",
             nameLocation: "end",
             nameGap: 24,
             nameTextStyle: {
@@ -231,7 +231,7 @@ const state = reactive({
                 data: [
                     {
                         value: chartData.radarDataAvg[6],
-                        name: "平均指标",
+                        name: "线下销售",
                         itemStyle: {
                             normal: {
                                 color: "#f8d351"
@@ -255,7 +255,7 @@ const state = reactive({
                     },
                     {
                         value: chartData.radarData[6],
-                        name: "我的指标",
+                        name: "线上零售",
                         itemStyle: {
                             normal: {
                                 color: "#43dfa2"

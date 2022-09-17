@@ -5,7 +5,7 @@
                 <i class="iconfont icon-rank" />
             </div>
             <div class="header-right flex-l">
-                <span class="header-title">产品销售渠道分析</span>
+                <span class="header-title">销量渠道分析</span>
                 <dv-decoration-3 class="dv-dec-3" />
             </div>
         </div>
@@ -22,12 +22,12 @@ import Chart from './chart/ChartTopRight1.vue';
 
 const chartData = reactive({
     indicatorData: [
-        { name: "数据1", max: 300 },
-        { name: "数据2", max: 250 },
-        { name: "数据3", max: 300 },
-        { name: "数据4", max: 5 },
-        { name: "数据5", max: 200 },
-        { name: "数据6", max: 100 }
+        { name: "朋友介绍", max: 300 },
+        { name: "官网搜索", max: 250 },
+        { name: "以旧换新", max: 300 },
+        { name: "线上预订", max: 5 },
+        { name: "线下预定", max: 200 },
+        { name: "广告预定", max: 100 }
     ],
     dataBJ: [
         [94, 69, 114, 2.08, 73, 39, 22],
@@ -61,24 +61,28 @@ const chartData = reactive({
 const config = reactive({
     data: [
         {
-            name: '南阳',
-            value: 167
+            name: '朋友介绍',
+            value: 1288
         },
         {
-            name: '周口',
-            value: 67
+            name: '官网搜索',
+            value: 3564
         },
         {
-            name: '漯河',
-            value: 123
+            name: '以旧换新',
+            value: 1144
         },
         {
-            name: '郑州',
-            value: 55
+            name: '线上预订',
+            value: 1288
         },
         {
-            name: '西峡',
-            value: 98
+            name: '线下预定',
+            value: 3455
+        },
+        {
+            name: '广告预定',
+            value: 1566
         }
     ]
 })

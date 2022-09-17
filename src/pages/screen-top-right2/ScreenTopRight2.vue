@@ -5,7 +5,7 @@
                 <i class="iconfont icon-border-bottom" />
             </div>
             <div class="header-right flex-l">
-                <span class="header-title">任务完成排行榜</span>
+                <span class="header-title">品牌销量排行榜</span>
                 <dv-decoration-3 class="dv-dec-3" />
             </div>
         </div>
@@ -19,18 +19,18 @@
 import { reactive } from 'vue';
 
 const config = reactive({
-    header: ['组件', '分支', '覆盖率'],
+    header: ['品牌', '销量', '环比'],
     data: [
-        ['组件1', 'dev-1', "<span class='scr-up'>↑75%</span>"],
-        ['组件2', 'dev-2', "<span class='scr-down'>↓33%</span>"],
-        ['组件3', 'dev-3', "<span class='scr-up'>↑100%</span>"],
-        ['组件4', 'rea-1', "<span class='scr-up'>↑94%</span>"],
-        ['组件5', 'rea-2', "<span class='scr-up'>↑95%</span>"],
-        ['组件6', 'fix-2', "<span class='scr-up'>↑63%</span>"],
-        ['组件7', 'fix-4', "<span class='scr-up'>↑84%</span>"],
-        ['组件8', 'fix-7', "<span class='scr-down'>↓46%</span>"],
-        ['组件9', 'dev-2', "<span class='scr-down'>↓13%</span>"],
-        ['组件10', 'dev-9', "<span class='scr-up'>↑76%</span>"]
+        ['理想ONE', '11496', "<span class='scr-up'>↑22%</span>"],
+        ['哪吒V', '7884', "<span class='scr-down'>↓13%</span>"],
+        ['零跑TO3', '5724', "<span class='scr-up'>↑32%</span>"],
+        ['问界M5', '5033', "<span class='scr-up'>↑34%</span>"],
+        ['零跑C11', '4345', "<span class='scr-up'>↑25%</span>"],
+        ['小鹏P7', '4224', "<span class='scr-up'>↑13%</span>"],
+        ['小鹏P5', '3686', "<span class='scr-up'>↑24%</span>"],
+        ['哪吒U', '3125', "<span class='scr-down'>↓16%</span>"],
+        ['蔚来ES6', '2936', "<span class='scr-down'>↓23%</span>"],
+        ['小鹏G3', '2221', "<span class='scr-up'>↑45%</span>"]
     ],
     rowNum: 7, //表格行数
     headerHeight: 35,

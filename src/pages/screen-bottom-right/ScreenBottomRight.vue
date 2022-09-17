@@ -5,7 +5,7 @@
                 <i class="iconfont icon-chart-line" />
             </div>
             <div class="header-right flex-l">
-                <span class="header-title">数据统计</span>
+                <span class="header-title">本周销量统计</span>
                 <dv-decoration-3 class="dv-dec-3" />
             </div>
         </div>
@@ -49,7 +49,7 @@ const confirmChartData = () => {
 
         // 折线图数据
         chartData.weekMaxData.push(chartData.maxData);
-        const distance = Math.round(Math.random() * 11000 + 500);
+        const distance = Math.round(Math.random() * 7000 + 500);
         chartData.weekLineData.push(distance);
 
         // 雷达图数据
@@ -79,7 +79,7 @@ const confirmChartData = () => {
 // 定时函数
 const startTimeInterval = () => {
     confirmChartData();
-    intervalInstance.value = setInterval(() => {
+    intervalInstance.value = window.setInterval(() => {
         confirmChartData();
     }, 3000);
 }

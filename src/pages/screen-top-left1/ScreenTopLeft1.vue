@@ -5,7 +5,7 @@
                 <i class="iconfont icon-tongji4" />
             </div>
             <div class="header-right flex-l">
-                <span class="header-title">任务通过率</span>
+                <span class="header-title">新势力销量占比</span>
                 <dv-decoration-3 class="dv-dec-3" />
             </div>
         </div>
@@ -20,7 +20,7 @@
                 </div>
                 <div class="data-item-bottom flex-c">
                     <span class="data-item-title"> {{ item.text }} </span>
-                    <span class="data-item-unit">(件)</span>
+                    <span class="data-item-unit">(辆)</span>
                 </div>
             </div>
         </div>
@@ -45,20 +45,20 @@ const iconFontArr = [
 const state = reactive({
     dataList: [
         {
-            number: 150,
-            text: '今日构建总量'
+            number: 3250,
+            text: '今日销量'
         },
         {
-            number: 144,
-            text: '总共完成数量'
+            number: 11122,
+            text: '本周销量'
         },
         {
-            number: 361,
-            text: '正在编译数量'
+            number: 36788,
+            text: '本月销量'
         },
         {
-            number: 571,
-            text: '未通过数量'
+            number: 152234,
+            text: '本季度销量'
         }
     ] as Array<DataObj>,
     dynamicDataList: [] as Array<any>,
@@ -79,10 +79,10 @@ const configList = () => {
         state.dynamicDataList.push({
             config: {
                 number: [e.number],
-                toFixed: 1,
+                toFixed: 0,
                 content: '{nt}',
                 style: {
-                    fontSize: 24
+                    fontSize: 20
                 }
             },
             text: e.text
@@ -91,7 +91,7 @@ const configList = () => {
 }
 
 const changeTiming = () => {
-    state.intervalInstance = setInterval(() => {
+    state.intervalInstance = window.setInterval(() => {
         changeNumber()
     }, 2000)
 }

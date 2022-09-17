@@ -28,7 +28,8 @@
                     <span class="sub-title">vue3-big-screen</span>
                 </div>
                 <div class="sub-item flex-r sub-item-common-l">
-                    <span class="sub-title">2022-09-16 周五 17:00</span>
+                    <span
+                        class="sub-title">{{timeInfo.dateYear}}&nbsp;&nbsp;&nbsp;{{timeInfo.dateWeek}}&nbsp;&nbsp;&nbsp;{{timeInfo.dateDay}}</span>
                 </div>
             </div>
         </div>
@@ -36,10 +37,36 @@
 </template>
 
 <script setup lang="ts">
+import { reactive, onMounted, onUnmounted } from 'vue';
+import { formatTime } from '@/utils/util'
 const decorationColors = [
     '#568aea',
     '#000000'
 ]
+const timeInfo = reactive({
+    setInterval: 0,
+    dateDay: '',
+    dateYear: '',
+    dateWeek: ''
+})
+const WEEK = ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
+
+onMounted(() => {
+    handleTime()
+})
+
+onUnmounted(() => {
+    clearInterval(timeInfo.setInterval)
+})
+
+const handleTime = () => {
+    timeInfo.setInterval = window.setInterval(() => {
+        const date = new Date()
+        timeInfo.dateDay = formatTime(date, 'HH: mm: ss')
+        timeInfo.dateYear = formatTime(date, 'yyyy-MM-dd')
+        timeInfo.dateWeek = WEEK[date.getDay()]
+    }, 1000)
+}
 </script>
 
 <style lang="scss" scoped>
@@ -57,6 +84,7 @@ const decorationColors = [
 
             .dv-dec-8 {
                 width: 30%;
+                height: 20px;
             }
 
             .title-section {
@@ -64,9 +92,13 @@ const decorationColors = [
                 text-align: center;
 
                 .header-title {
-                    color: #fff;
+                    background-color: transparent;
                     font-size: $lg-font-size;
                     font-weight: 550;
+                    background-image: linear-gradient(#fff, #45a1f1);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
             }
         }

@@ -32,14 +32,14 @@ const state = reactive({
             icon: 'circle',
             bottom: 0,
             x: 'center',
-            data: ['数据1', '数据2', '数据3', '数据4', '数据5', '数据6'],
+            data: ['理想ONE', '哪吒V', '零跑TO3', '问界M5', '零跑C11', '小鹏P7'],
             textStyle: {
                 color: '#fff'
             }
         },
         series: [
             {
-                name: '通过率统计',
+                name: '销量占比',
                 type: 'pie',
                 radius: [10, 50],
                 roseType: 'area',
@@ -57,12 +57,12 @@ const state = reactive({
                     }
                 },
                 data: [
-                    { value: 10, name: '数据1' },
-                    { value: 5, name: '数据2' },
-                    { value: 15, name: '数据3' },
-                    { value: 25, name: '数据4' },
-                    { value: 20, name: '数据5' },
-                    { value: 35, name: '数据6' },
+                    { value: 11496, name: '理想ONE' },
+                    { value: 7884, name: '哪吒V' },
+                    { value: 5724, name: '零跑TO3' },
+                    { value: 5033, name: '问界M5' },
+                    { value: 4345, name: '零跑C11' },
+                    { value: 4224, name: '小鹏P7' },
                 ]
             }
         ]

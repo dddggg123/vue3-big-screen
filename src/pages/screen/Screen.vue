@@ -1,6 +1,9 @@
 <template>
     <div class="screen-container">
         <div class="screen-content" ref="screenRef">
+            <dv-loading v-if="loading">
+                <span class="loading-title">加载中...</span>
+            </dv-loading>
             <div class="header-section">
                 <ScreenHeader></ScreenHeader>
             </div>
@@ -38,7 +41,7 @@
 
 <script setup lang="ts">
 import windowResize from '@/utils/resize';
-import { onMounted, onUnmounted } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 import ScreenHeader from '@/pages/screen-header/ScreenHeader.vue';
 import ScreenFooter from '@/pages/screen-footer/ScreenFooter.vue';
 import ScreenTopLeft1 from '@/pages/screen-top-left1/ScreenTopLeft1.vue';
@@ -50,11 +53,15 @@ import ScreenBottomLeft from '@/pages/screen-bottom-left/ScreenBottomLeft.vue';
 import ScreenBottomRight from '@/pages/screen-bottom-right/ScreenBottomRight.vue';
 
 const { screenRef, calcRate, windowDraw, unWindowDraw } = windowResize()
+const loading = ref(true);
 
 onMounted(() => {
     // 监听浏览器窗口尺寸变化
     windowDraw()
     calcRate()
+    setTimeout(() => {
+        loading.value = false;
+    }, 2000);
 })
 
 onUnmounted(() => {
@@ -63,6 +70,8 @@ onUnmounted(() => {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/common/variables.scss';
+
 .screen-container {
     width: 100vw;
     height: 100vh;
@@ -77,6 +86,12 @@ onUnmounted(() => {
         box-sizing: border-box;
         padding: 12px;
         background-image: url('@/assets/home_bg.png') no-repeat;
+
+        .loading-title {
+            font-size: $base-font-size;
+            color: #fff;
+            margin-top: 10px;
+        }
 
         .screen-chart-section1 {
             margin-top: 10px;

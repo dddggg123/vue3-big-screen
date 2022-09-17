@@ -3,8 +3,9 @@
         <div class="top-center-data">
             <div class="data-item" v-for="(item, index) in state.dataList">
                 <p class="data-item-title">{{item.title}}</p>
-                <p class="data-item-desc">{{item.value}}</p>
+                <!-- <p class="data-item-desc">{{item.value}}</p> -->
                 <!-- <dv-scroll-ranking-board class="dv-scr-rank-board" :config="ranking" /> -->
+                <dv-digital-flop class="dv-digital-flop" :config="item.config" />
             </div>
         </div>
         <div class="top-center-chart">
@@ -14,7 +15,7 @@
                         <i class="iconfont icon-zhibiao2" />
                     </div>
                     <div class="header-right flex-l">
-                        <span class="header-title">年度负责人组件达标榜</span>
+                        <span class="header-title">今日地区销量排行</span>
                         <dv-decoration-3 class="dv-dec-3" />
                     </div>
                 </div>
@@ -37,27 +38,81 @@
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue';
+import { reactive, onMounted, onUnmounted } from 'vue';
 const state = reactive({
     dataList: [
         {
-            title: '今年累计任务建次数',
-            value: '1888'
+            title: '今日累计销量',
+            value: 755,
+            config: {
+                number: [755],
+                toFixed: 0,
+                content: '{nt}',
+                textAlign: 'left',
+                style: {
+                    fontSize: 24
+                }
+            }
         }, {
-            title: '本月累计任务次数',
-            value: '333'
+            title: '本周累计销量',
+            value: 3288,
+            config: {
+                number: [3288],
+                toFixed: 0,
+                content: '{nt}',
+                textAlign: 'left',
+                style: {
+                    fontSize: 24
+                }
+            }
         }, {
-            title: '今日累计任务次数',
-            value: '188'
+            title: '本月累计销量',
+            value: 14222,
+            config: {
+                number: [14222],
+                toFixed: 0,
+                content: '{nt}',
+                textAlign: 'left',
+                style: {
+                    fontSize: 24
+                }
+            }
         }, {
-            title: '今年失败任务次数',
-            value: '66'
+            title: '季度累计销量',
+            value: 41022,
+            config: {
+                number: [41022],
+                toFixed: 0,
+                content: '{nt}',
+                textAlign: 'left',
+                style: {
+                    fontSize: 24
+                }
+            }
         }, {
-            title: '今年成功次数',
-            value: '988'
+            title: '年度累计销量',
+            value: 176888,
+            config: {
+                number: [176888],
+                toFixed: 0,
+                content: '{nt}',
+                textAlign: 'left',
+                style: {
+                    fontSize: 24
+                }
+            }
         }, {
-            title: '今年达标任务个数',
-            value: '566'
+            title: '今日目标销量',
+            value: 820,
+            config: {
+                number: [820],
+                toFixed: 0,
+                content: '{nt}',
+                textAlign: 'left',
+                style: {
+                    fontSize: 24
+                }
+            }
         }
     ],
     completeObj: {
@@ -67,50 +122,73 @@ const state = reactive({
     rankList: {
         data: [
             {
-                name: '周口',
-                value: 55
+                name: '武汉市',
+                value: 1210
             },
             {
-                name: '南阳',
-                value: 120
+                name: '北京',
+                value: 1655
             },
             {
-                name: '西峡',
-                value: 78
+                name: '上海',
+                value: 1788
             },
             {
-                name: '驻马店',
-                value: 66
+                name: '深圳',
+                value: 2100
             },
             {
-                name: '新乡',
-                value: 80
+                name: '广州',
+                value: 1577
             },
             {
-                name: '新乡2',
-                value: 80
+                name: '成都',
+                value: 1625
             },
             {
-                name: '新乡3',
-                value: 80
+                name: '厦门',
+                value: 857
             },
             {
-                name: '新乡4',
-                value: 80
+                name: '郑州',
+                value: 1322
             },
             {
-                name: '新乡5',
-                value: 80
+                name: '长沙',
+                value: 1122
             },
             {
-                name: '新乡6',
-                value: 80
+                name: '南昌',
+                value: 899
             }
         ],
         carousel: 'single',
-        unit: '人'
-    }
+        unit: '辆'
+    },
+    intervalInstance: 0
 })
+
+onMounted(() => {
+    changeTiming()
+})
+
+onUnmounted(() => {
+    window.clearInterval(state.intervalInstance)
+})
+
+const changeTiming = () => {
+    state.intervalInstance = window.setInterval(() => {
+        changeNumber()
+    }, 2000)
+}
+
+const changeNumber = () => {
+    state.dataList.forEach((item, _index) => {
+        item.value += 1;
+        item.config.number[0] += 1
+        item.config = { ...item.config }
+    })
+}
 </script>
 
 <style lang="scss" scoped>
@@ -145,6 +223,12 @@ const state = reactive({
                 font-size: $lg-font-size;
                 font-weight: 550;
                 margin-top: 10px;
+            }
+
+            .dv-digital-flop {
+                width: 100%;
+                height: 30px;
+                margin-top: 5px;
             }
         }
     }

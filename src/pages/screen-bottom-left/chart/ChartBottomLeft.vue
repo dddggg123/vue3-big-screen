@@ -14,7 +14,7 @@ const props = defineProps({
     }
 })
 
-const {chartData} = props;
+const { chartData } = props;
 const chartRef = ref()
 const state = reactive({
     height: '420px',
@@ -42,39 +42,39 @@ const state = reactive({
         },
         xAxis: {
             data: [
-                "市区",
-                "万州",
-                "江北",
-                "南岸",
-                "北碚",
-                "綦南",
-                "长寿",
-                "永川",
-                "璧山",
-                "江津",
-                "城口",
-                "大足",
-                "垫江",
-                "丰都",
-                "奉节",
-                "合川",
-                "江津区",
-                "开州",
-                "南川",
-                "彭水",
-                "黔江",
-                "石柱",
-                "铜梁",
-                "潼南",
-                "巫山",
-                "巫溪",
-                "武隆",
-                "秀山",
-                "酉阳",
-                "云阳",
-                "忠县",
-                "川东",
-                "检修"
+                "北京",
+                "上海",
+                "深圳",
+                "广州",
+                "南京",
+                "武汉",
+                "成都",
+                "郑州",
+                "苏州",
+                "南昌",
+                "长沙",
+                "厦门",
+                "大连",
+                "福州",
+                "萧山",
+                "洛阳",
+                "襄阳",
+                "拉萨",
+                "乌鲁木齐",
+                "包头",
+                "鄂尔多斯",
+                "哈尔滨",
+                "宁波",
+                "佛山",
+                "汕头",
+                "汕尾",
+                "珠海",
+                "银川",
+                "桂林",
+                "贵阳",
+                "株洲",
+                "湘潭",
+                "岳阳"
             ],
             axisLine: {
                 lineStyle: {
@@ -112,7 +112,7 @@ const state = reactive({
         ],
         series: [
             {
-                name: "贯通率",
+                name: "完成率",
                 type: "line",
                 smooth: true,
                 showAllSymbol: true,
@@ -127,7 +127,7 @@ const state = reactive({
                 data: chartData.rateData
             },
             {
-                name: "已贯通",
+                name: "已经销售",
                 type: "bar",
                 barWidth: 10,
                 itemStyle: {
@@ -142,7 +142,7 @@ const state = reactive({
                 data: chartData.barData
             },
             {
-                name: "计划贯通",
+                name: "计划销售",
                 type: "bar",
                 barGap: "-100%",
                 barWidth: 10,
