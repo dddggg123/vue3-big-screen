@@ -3,9 +3,10 @@
 
 ### 项目介绍
 
-- 这里一个基于 Vue3、TypeScript、DataV、ECharts 框架的 " **数据大屏项目** "
+- 这里一个基于 Vue3、Vite、TypeScript、DataV、ECharts 框架的 " **数据大屏项目** "
 - 使用 template实现组件封装，各类型图标支持动态渲染，可根据自身需求进行替换。
 - 项目按照 1920*1080 作为设计稿，支持任何尺寸的同比例缩放。
+- 项目参考[原项目](https://gitee.com/MTrun/vue-big-screen-plugin)的界面和设计思路，优化了相关细节，解决了原先项目中的各种错误，采用Vite提高了运行效率。
 ### 项目截图
 ![输入图片说明](https://xkxk-1253929253.cos.ap-shanghai.myqcloud.com/vue3-big-screen/1663465302202.jpg)
 
