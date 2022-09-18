@@ -3,8 +3,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue';
+import { ref, reactive, watch } from 'vue';
 const chartRef = ref()
+const props = defineProps({
+    // 图表数据项
+    chartData: {
+        type: Object,
+        default: {},
+        require: true
+    }
+})
+const { chartData } = props;
 const state = reactive({
     height: '220px',
     width: '260px',
@@ -32,7 +41,7 @@ const state = reactive({
             icon: 'circle',
             bottom: 0,
             x: 'center',
-            data: ['理想ONE', '哪吒V', '零跑TO3', '问界M5', '零跑C11', '小鹏P7'],
+            data: chartData.titleArr,
             textStyle: {
                 color: '#fff'
             }
@@ -56,18 +65,19 @@ const state = reactive({
                         show: false
                     }
                 },
-                data: [
-                    { value: 11496, name: '理想ONE' },
-                    { value: 7884, name: '哪吒V' },
-                    { value: 5724, name: '零跑TO3' },
-                    { value: 5033, name: '问界M5' },
-                    { value: 4345, name: '零跑C11' },
-                    { value: 4224, name: '小鹏P7' },
-                ]
+                data: chartData.dataArr
             }
         ]
     }
 })
+
+watch(() => props.chartData, (val: any) => {
+    state.options.legend.data = val.titleArr;
+    state.options.series[0].data = val.dataArr;
+    }, {
+        immediate: true,
+        deep: true
+    })
 </script>
 
 <style scoped>

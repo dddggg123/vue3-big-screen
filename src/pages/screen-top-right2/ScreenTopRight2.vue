@@ -6,7 +6,7 @@
             </div>
             <div class="header-right flex-l">
                 <span class="header-title">品牌销量排行榜</span>
-                <dv-decoration-3 class="dv-dec-3" />
+                <dv-decoration-1 class="dv-dec-1" />
             </div>
         </div>
         <div class="screen-top-chart">
@@ -68,7 +68,7 @@ const config = reactive({
                 font-size: $sm-font-size;
             }
 
-            .dv-dec-3 {
+            .dv-dec-1 {
                 width: 50px;
                 height: 20px;
                 margin-left: 10px;

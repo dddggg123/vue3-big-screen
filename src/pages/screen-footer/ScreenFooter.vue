@@ -1,13 +1,13 @@
 <template>
     <div class="screen-footer">
         <div class="screen-footer-left">
-            <dv-decoration-10 class="dv-dec-10" />
+            <dv-decoration-10 :color="['#45a1f1', '#000000']" class="dv-dec-10" />
         </div>
         <div class="screen-footer-middle">
-            <dv-decoration-5 :dur="10"/>
+            <dv-decoration-5 :color="['#45a1f1', '#000000']" :dur="10"/>
         </div>
         <div class="screen-footer-right">
-            <dv-decoration-10 class="dv-dec-10 dev-reverse" />
+            <dv-decoration-10 :color="['#45a1f1', '#000000']" class="dv-dec-10 dev-reverse" />
         </div>
     </div>
 </template>
@@ -33,7 +33,7 @@
     }
 
     .dv-dec-10 {
-        margin-top: -8px;
+        margin-top: -6px;
     }
 }
 </style>

@@ -48,8 +48,8 @@ const chartRef = ref();
 const chart = ref<EChartsType>()
 
 onMounted(() => {
-    echarts.registerTheme('myTheme', theme) // 覆盖默认主题
-    chart.value = echarts.init(chartRef.value, 'myTheme')
+    echarts.registerTheme('myTheme', theme); // 覆盖默认主题
+    chart.value = echarts.init(chartRef.value, 'myTheme');
     echarts.registerMap("fujian", geoJson as any);
     initChart()
 })

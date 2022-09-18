@@ -17,7 +17,7 @@ const props = defineProps({
 const { chartData } = props;
 const chartRef = ref()
 const state = reactive({
-    height: '420px',
+    height: '400px',
     width: '100%',
     options: {
         tooltip: {
@@ -121,7 +121,7 @@ const state = reactive({
                 yAxisIndex: 1,
                 itemStyle: {
                     normal: {
-                        color: "#F02FC2"
+                        color: "#ffdb5c"
                     }
                 },
                 data: chartData.rateData
@@ -134,7 +134,7 @@ const state = reactive({
                     normal: {
                         barBorderRadius: 5,
                         color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                            { offset: 0, color: "#956FD4" },
+                            { offset: 0, color: "#e7bcf3" },
                             { offset: 1, color: "#3EACE5" }
                         ])
                     }
@@ -150,9 +150,9 @@ const state = reactive({
                     normal: {
                         barBorderRadius: 5,
                         color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                            { offset: 0, color: "rgba(156,107,211,0.8)" },
-                            { offset: 0.2, color: "rgba(156,107,211,0.5)" },
-                            { offset: 1, color: "rgba(156,107,211,0.2)" }
+                            { offset: 0, color: "rgba(50,197,233,0.8)" },
+                            { offset: 0.2, color: "rgba(50,197,233,0.5)" },
+                            { offset: 1, color: "rgba(50,197,233,0.2)" }
                         ])
                     }
                 },

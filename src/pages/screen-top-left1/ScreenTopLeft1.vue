@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="screen-top-chart">
-            <Chart></Chart>
+            <Chart :chart-data="chartData"></Chart>
         </div>
         <div class="screen-top-data flex-l">
             <div class="data-item" v-for="(item, index) in state.dynamicDataList" :key="index">
@@ -63,6 +63,18 @@ const state = reactive({
     ] as Array<DataObj>,
     dynamicDataList: [] as Array<any>,
     intervalInstance: 0
+})
+
+const chartData = reactive({
+    titleArr: ['理想ONE', '哪吒V', '零跑TO3', '问界M5', '零跑C11', '小鹏P7'],
+    dataArr: [
+        { value: 11496, name: '理想ONE' },
+        { value: 7884, name: '哪吒V' },
+        { value: 5724, name: '零跑TO3' },
+        { value: 5033, name: '问界M5' },
+        { value: 4345, name: '零跑C11' },
+        { value: 4224, name: '小鹏P7' },
+    ]
 })
 
 onMounted(() => {
@@ -163,7 +175,7 @@ const changeNumber = () => {
                 }
 
                 .data-item-unit {
-                    color: yellowgreen;
+                    color: #9fe6b8;
                 }
             }
         }

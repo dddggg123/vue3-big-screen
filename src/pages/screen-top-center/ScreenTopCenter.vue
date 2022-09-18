@@ -116,8 +116,8 @@ const state = reactive({
         }
     ],
     completeObj: {
-        data: [66, 45],
-        shape: 'roundRect'
+        data: [45, 56],
+        shape: 'round'
     },
     rankList: {
         data: [
@@ -178,7 +178,8 @@ onUnmounted(() => {
 
 const changeTiming = () => {
     state.intervalInstance = window.setInterval(() => {
-        changeNumber()
+        changeNumber();
+        // changeCompleteObj();
     }, 2000)
 }
 
@@ -189,6 +190,19 @@ const changeNumber = () => {
         item.config = { ...item.config }
     })
 }
+
+// const changeCompleteObj = () => {
+//     let list = state.completeObj.data;
+//     let pondDown = list[0];
+//     let pondUp = list[1];
+//     pondDown += 1;
+//     pondUp += 1;
+//     if (pondUp === 100) {
+//         pondUp = 40;
+//         pondDown = 33;
+//     }
+//     state.completeObj.data = [pondDown, pondUp];
+// }
 </script>
 
 <style lang="scss" scoped>
@@ -213,7 +227,7 @@ const changeNumber = () => {
             padding: 0 10px;
 
             .data-item-title {
-                color: #257dff;
+                color: #fff;
                 font-size: $base-font-size;
                 margin-top: 10px;
             }

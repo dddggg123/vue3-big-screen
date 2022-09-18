@@ -1,30 +1,30 @@
 <template>
     <div class="screen-header">
         <div class="screen-header-top-section">
-            <dv-decoration-10 class="dv-dec-10" />
+            <dv-decoration-10 :color="['#45a1f1', '#000000']" class="dv-dec-10" />
             <div class="screen-header-title-section">
-                <dv-decoration-8 class="dv-dec-8" :color="decorationColors" />
+                <dv-decoration-8 :color="['#45a1f1', '#000000']" class="dv-dec-8" />
                 <div class="title-section">
                     <p class="header-title">新能源汽车大数据可视化平台</p>
                 </div>
-                <dv-decoration-8 class="dv-dec-8" :reverse="true" :color="decorationColors" />
+                <dv-decoration-8 :color="['#45a1f1', '#000000']" class="dv-dec-8" :reverse="true"/>
             </div>
-            <dv-decoration-10 class="dv-dec-10 dev-reverse" :reverse="true" />
+            <dv-decoration-10 :color="['#45a1f1', '#000000']" class="dv-dec-10 dev-reverse" :reverse="true" />
         </div>
         <div class="screen-header-bottom-section">
             <div class="sub-section">
                 <div class="sub-item flex-l sub-item-common-r">
-                    <span class="sub-title">数据分析</span>
+                    <span @click="downloadHandler('github')" class="sub-title special">Github地址</span>
                 </div>
                 <div class="sub-item flex-c react-l">
-                    <span class="sub-title">切换数据</span>
+                    <span @click="downloadHandler('gitee')" class="sub-title special">Gitee地址</span>
                 </div>
             </div>
             <div class="sub-dec-section">
                 <dv-decoration-6 class="dv-dec-6" :reverse="true" :color="['#50e3c2', '#67a1e5']" />
             </div>
             <div class="sub-section">
-                <div class="sub-item flex-c react-r">
+                <div class="sub-item flex-c react-r item-special">
                     <span class="sub-title">vue3-big-screen</span>
                 </div>
                 <div class="sub-item flex-r sub-item-common-l">
@@ -39,10 +39,6 @@
 <script setup lang="ts">
 import { reactive, onMounted, onUnmounted } from 'vue';
 import { formatTime } from '@/utils/util'
-const decorationColors = [
-    '#568aea',
-    '#000000'
-]
 const timeInfo = reactive({
     setInterval: 0,
     dateDay: '',
@@ -66,6 +62,16 @@ const handleTime = () => {
         timeInfo.dateYear = formatTime(date, 'yyyy-MM-dd')
         timeInfo.dateWeek = WEEK[date.getDay()]
     }, 1000)
+}
+
+const downloadHandler = (type:string) => {
+    switch (type) {
+        case 'github':   
+            break;
+        case 'gitee':
+            window.open('https://gitee.com/xiaoxiang_reincarnation/vue3-big-screen.git');
+            break;
+    }
 }
 </script>
 
@@ -126,6 +132,12 @@ const handleTime = () => {
                 .sub-title {
                     color: #fff;
                     font-size: $base-font-size;
+                }
+
+                .special {
+                    cursor: pointer;
+                    color: #37a2da;
+                    font-weight: 550;
                 }
             }
 

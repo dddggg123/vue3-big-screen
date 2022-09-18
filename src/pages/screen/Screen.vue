@@ -75,7 +75,7 @@ onUnmounted(() => {
 .screen-container {
     width: 100vw;
     height: 100vh;
-    background-color: #020308;
+    background-color: $theme-color;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,7 +85,7 @@ onUnmounted(() => {
         height: 1080px;
         box-sizing: border-box;
         padding: 12px;
-        background-image: url('@/assets/home_bg.png') no-repeat;
+        background-image: url('@/assets/home_bg.png');
 
         .loading-title {
             font-size: $base-font-size;
