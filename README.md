@@ -25,7 +25,6 @@
 1.  [Vue3 官方文档](https://composition-api.vuejs.org/zh/api.html#setup)
 2.  [DataV 官方文档](http://datav.jiaminghi.com/guide/)
 3.  [echarts 实例](https://echarts.apache.org/examples/zh/index.html)，[echarts API 文档](https://echarts.apache.org/zh/api.html#echarts)
-4.  [项目 gitee 地址（国内速度快）](https://gitee.com/xiaoxiang_reincarnation/vue3-big-screen.git)
 
 ### 使用说明
 ```
