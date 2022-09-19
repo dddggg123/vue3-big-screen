@@ -1,4 +1,4 @@
-# Vue3 Big Screen
+# Vue3-Big-Screen
 ![输入图片说明](https://xkxk-1253929253.cos.ap-shanghai.myqcloud.com/vue3-big-screen/logo.jpg)
 
 ### 项目介绍
@@ -8,6 +8,7 @@
 - 使用Vite进行项目构建提高了开发和打包效率。
 - 项目按照 1920*1080 作为设计稿，支持任何尺寸的同比例缩放。
 - 项目参考[原项目](https://gitee.com/MTrun/vue-big-screen-plugin)的界面和设计思路，优化了相关细节，解决了原先项目中的各种错误。
+- 项目已经适配移动端H5，有兴趣的朋友可以点击这里[传送门](https://gitee.com/xiaoxiang_reincarnation/vue3-ts-vite-admin-mobile.git)。
 ### 项目截图
 ![输入图片说明](https://xkxk-1253929253.cos.ap-shanghai.myqcloud.com/vue3-big-screen/1663465302202.jpg)
 
@@ -16,7 +17,7 @@
 
 ### 源码下载
 - gitee下载地址：[项目链接](https://gitee.com/xiaoxiang_reincarnation/vue3-big-screen.git)
-
+- github下载地址：[项目链接](https://github.com/dddggg123/vue3-big-screen.git)
 ### 相关技术栈
 
 - Vue3、TypeScript、Vite、DataV、ECharts
@@ -25,7 +26,8 @@
 
 1.  [Vue3 官方文档](https://composition-api.vuejs.org/zh/api.html#setup)
 2.  [DataV 官方文档](http://datav.jiaminghi.com/guide/)
-3.  [echarts 实例](https://echarts.apache.org/examples/zh/index.html)，[echarts API 文档](https://echarts.apache.org/zh/api.html#echarts)
+3.  [echarts 示例](https://echarts.apache.org/examples/zh/index.html)
+4.  [echarts API 文档](https://echarts.apache.org/zh/api.html#echarts)
 
 ### 使用说明
 ```

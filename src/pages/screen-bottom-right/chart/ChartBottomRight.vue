@@ -170,7 +170,7 @@ const state = reactive({
                     max: 10
                 },
                 {
-                    name: "朋友推进",
+                    name: "朋友推荐",
                     max: 12
                 },
                 {

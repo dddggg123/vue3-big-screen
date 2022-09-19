@@ -1,9 +1,11 @@
 <template>
     <div class="screen-container">
         <div class="screen-content" ref="screenRef">
-            <dv-loading v-if="loading">
-                <span class="loading-title">加载中...</span>
-            </dv-loading>
+            <div v-if="loading" class="mask flex-c">
+                <dv-loading>
+                    <span class="loading-title">加载中...</span>
+                </dv-loading>
+            </div>
             <div class="header-section">
                 <ScreenHeader></ScreenHeader>
             </div>
@@ -79,6 +81,18 @@ onUnmounted(() => {
     display: flex;
     justify-content: center;
     align-items: center;
+
+
+    .mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: $theme-color;
+        z-index: 9999;
+        background-image: url('@/assets/home_bg.png');
+    }
 
     .screen-content {
         width: 1920px;

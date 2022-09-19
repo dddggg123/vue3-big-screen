@@ -7,7 +7,7 @@
                 <div class="title-section">
                     <p class="header-title">新能源汽车大数据可视化平台</p>
                 </div>
-                <dv-decoration-8 :color="['#45a1f1', '#000000']" class="dv-dec-8" :reverse="true"/>
+                <dv-decoration-8 :color="['#45a1f1', '#000000']" class="dv-dec-8" :reverse="true" />
             </div>
             <dv-decoration-10 :color="['#45a1f1', '#000000']" class="dv-dec-10 dev-reverse" :reverse="true" />
         </div>
@@ -64,9 +64,10 @@ const handleTime = () => {
     }, 1000)
 }
 
-const downloadHandler = (type:string) => {
+const downloadHandler = (type: string) => {
     switch (type) {
-        case 'github':   
+        case 'github':
+            window.open('https://github.com/dddggg123/vue3-big-screen.git');
             break;
         case 'gitee':
             window.open('https://gitee.com/xiaoxiang_reincarnation/vue3-big-screen.git');

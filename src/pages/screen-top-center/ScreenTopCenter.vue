@@ -31,7 +31,9 @@
                         <!-- <dv-decoration-3 class="dv-dec-3" /> -->
                     </div>
                 </div>
-                <dv-water-level-pond class="dv-water-level-pond" :config="state.completeObj" />
+                <div class="pond-section">
+                    <dv-water-level-pond class="dv-water-level-pond" :config="state.completeObj" />
+                </div>
             </div>
         </div>
     </div>
@@ -262,9 +264,21 @@ const changeNumber = () => {
                 padding: 0 10px;
             }
 
-            .dv-water-level-pond {
-                height: 200px;
+            // 这里实现动态等宽高
+            .pond-section {
+                position: relative;
                 width: 100%;
+                height: 0;
+                padding-top: 100%;
+                margin-top: 15px;
+
+                .dv-water-level-pond {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                }
             }
 
             .screen-top-header {
