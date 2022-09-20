@@ -9,6 +9,8 @@
 - 项目按照 1920*1080 作为设计稿，支持任何尺寸的同比例缩放。
 - 项目参考[原项目](https://gitee.com/MTrun/vue-big-screen-plugin)的界面和设计思路，优化了相关细节，解决了原先项目中的各种错误。
 - 项目已经适配移动端H5，有兴趣的朋友可以点击这里[传送门](https://gitee.com/xiaoxiang_reincarnation/vue3-ts-vite-admin-mobile.git)。
+- 项目中注释了图片压缩vite插件，如需对图片进行压缩可自行安装vite-plugin-imagemin插件 
+  ```npm i vite-plugin-imagemin -D 或者 cnpm i vite-plugin-imagemin -D```
 ### 项目截图
 ![输入图片说明](https://xkxk-1253929253.cos.ap-shanghai.myqcloud.com/vue3-big-screen/1663465302202.jpg)
 
