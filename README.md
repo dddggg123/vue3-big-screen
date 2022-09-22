@@ -12,7 +12,7 @@
 - 项目中注释了图片压缩vite插件，如需对图片进行压缩可自行安装vite-plugin-imagemin插件 
   ```npm i vite-plugin-imagemin -D 或者 cnpm i vite-plugin-imagemin -D```
 ### 项目截图
-![输入图片说明](https://xkxk-1253929253.cos.ap-shanghai.myqcloud.com/vue3-big-screen/1663465302202.jpg)
+![输入图片说明](https://xkxk-1253929253.cos.ap-shanghai.myqcloud.com/vue3-big-screen/big-screen_2m.gif)
 
 ### 项目预览
 - 在线预览地址：https://screen.xkxk.tech
