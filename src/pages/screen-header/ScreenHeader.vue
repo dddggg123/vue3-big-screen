@@ -1,7 +1,7 @@
 <template>
     <div class="screen-header">
         <div class="screen-header-top-section">
-            <dv-decoration-10 :color="['#45a1f1', '#000000']" class="dv-dec-10" />
+            <dv-decoration-10 :color="['#45a1f1', '#000000']" class="dv-dec-10" :dur="10"/>
             <div class="screen-header-title-section">
                 <dv-decoration-8 :color="['#45a1f1', '#000000']" class="dv-dec-8" />
                 <div class="title-section">
@@ -9,7 +9,7 @@
                 </div>
                 <dv-decoration-8 :color="['#45a1f1', '#000000']" class="dv-dec-8" :reverse="true" />
             </div>
-            <dv-decoration-10 :color="['#45a1f1', '#000000']" class="dv-dec-10 dev-reverse" :reverse="true" />
+            <dv-decoration-10 :color="['#45a1f1', '#000000']" class="dv-dec-10 dev-reverse" :reverse="true" :dur="10"/>
         </div>
         <div class="screen-header-bottom-section">
             <div class="sub-section">
@@ -25,7 +25,7 @@
             </div>
             <div class="sub-section">
                 <div class="sub-item flex-c react-r item-special">
-                    <span class="sub-title">vue3-big-screen</span>
+                    <span class="sub-title">版本号：1.0.092202</span>
                 </div>
                 <div class="sub-item flex-r sub-item-common-l">
                     <span

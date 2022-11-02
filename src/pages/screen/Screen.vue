@@ -100,6 +100,7 @@ onUnmounted(() => {
         box-sizing: border-box;
         padding: 12px;
         background-image: url('@/assets/home_bg.png');
+        transition: all .2s ease-in-out;
 
         .loading-title {
             font-size: $base-font-size;
