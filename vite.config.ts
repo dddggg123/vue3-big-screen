@@ -63,7 +63,6 @@ export default defineConfig({
 				},
 			},
 		},
-		brotliSize: false,
 	},
 	plugins: [
 		vue(),
